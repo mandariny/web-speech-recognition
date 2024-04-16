@@ -6,7 +6,7 @@ import {
 } from "streamlit-component-lib"
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
-const SelectableDataTable: React.FC<ComponentProps> = props => {
+const WebSpeechRecognition: React.FC<ComponentProps> = props => {
   const [voice, setVoice] = useState<ReactText>()
   const { transcript, listening, resetTranscript } = useSpeechRecognition();
 
@@ -27,7 +27,6 @@ const SelectableDataTable: React.FC<ComponentProps> = props => {
 
   return (
     <div>
-      <textarea className="transcript" value={transcript} onChange={() => {}} />
       <button onClick={toggleListening}>
         {listening ? '🛑' : '⏺️'}
       </button>
@@ -35,4 +34,4 @@ const SelectableDataTable: React.FC<ComponentProps> = props => {
   )
 }
 
-export default withStreamlitConnection(SelectableDataTable)
+export default withStreamlitConnection(WebSpeechRecognition)

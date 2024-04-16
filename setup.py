@@ -1,7 +1,7 @@
 import setuptools
 
 setuptools.setup(
-    name="streamlit-selectable-data-table",
+    name="streamlit-web-speech-recognition",
     version="0.0.1",
     author="",
     author_email="",

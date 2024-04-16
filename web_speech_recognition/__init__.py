@@ -6,17 +6,15 @@ import streamlit.components.v1 as components
 _RELEASE = False
 
 if not _RELEASE:
-    _selectable_data_table = components.declare_component(
-        "selectable_data_table",
+    _web_speech_recognition = components.declare_component(
+        "web_speech_recognition",
         url="http://localhost:3001",
     )
 else:
     parent_dir = os.path.dirname(os.path.abspath(__file__))
     build_dir = os.path.join(parent_dir, "frontend/build")
-    _selectable_data_table = components.declare_component("selectable_data_table", path=build_dir)
+    _web_speech_recognition = components.declare_component("web_speech_recognition", path=build_dir)
 
 
-# def selectable_data_table(data, key=None):
-#     return _selectable_data_table(data=data, default=[], key=key)
-def selectable_data_table(key=None):
-    return _selectable_data_table(default=[], key=key)
+def web_speech_recognition(key=None):
+    return _web_speech_recognition(default=[], key=key)
